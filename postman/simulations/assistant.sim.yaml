@@ -1,0 +1,26 @@
+simulation: lab-shell-local
+routing: path
+mocks:
+  - routeKey: llm
+    path: ../mocks/chat/config.yaml
+  - routeKey: limited
+    path: ../mocks/limited/config.yaml
+    scenarios:
+      - overrides:
+          conditions:
+            error:
+              status_code: 429
+  - routeKey: unavailable
+    path: ../mocks/unavailable/config.yaml
+    scenarios:
+      - overrides:
+          conditions:
+            error:
+              status_code: 500
+  - routeKey: slow
+    path: ../mocks/slow/config.yaml
+    scenarios:
+      - overrides:
+          conditions:
+            latency:
+              delay_ms: 1000

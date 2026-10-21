@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+!.env.example
+.demo-data/
+*.sqlite3*
+build/
+dist/
+postman/*.ndjson
+postman/*.err
+~$*
+/实验7_实验指导书.docx

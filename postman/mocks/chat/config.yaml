@@ -1,0 +1,10 @@
+version: 1
+name: Lab Shell Chat Completions contract subset
+slug: lab-shell-chat-completions-contr
+protocol: http
+interceptRequests: true
+port: 4901
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

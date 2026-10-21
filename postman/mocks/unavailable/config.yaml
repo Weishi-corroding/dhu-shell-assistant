@@ -1,0 +1,9 @@
+version: 1
+name: Chat unavailable fixture
+slug: chat-unavailable
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ../chat/default.js
+    default: true
